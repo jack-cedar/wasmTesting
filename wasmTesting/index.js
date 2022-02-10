@@ -1,6 +1,8 @@
+let test;
 async function init() {
-    let test = await getModule("program.wasm")
+    test = await getModule("program.wasm")
     let out = test.instance.exports.helloWorld()
+    console.log(out)
     document.getElementById("myDiv").innerHTML = out
 }
 init()
